@@ -1,3 +1,5 @@
+// find largest prime factor of N
+
 #include <iostream>
 #include <cmath>
 using namespace std;

@@ -1,7 +1,6 @@
 #include <iostream>
 #include <queue>
 #include <vector>
-#include <functional>
 using namespace std;
 
 void dijkstra(int start, int size, int** adjacencyMatrix){
@@ -10,11 +9,11 @@ void dijkstra(int start, int size, int** adjacencyMatrix){
 	for(int i = 0; i < size; i++){
 		distance[i] = -1;
 	}
-	priority_queue<int, vector<int>, greater<int>> Q;
+	queue<int> Q;
 	distance[start] = 0;
 	Q.push(start);
 	while(!Q.empty()){
-		int tmp = Q.top();
+		int tmp = Q.front();
 		Q.pop();
 		// if(visited[tmp]) continue;
 		for(int i = 0; i < size; i++){
